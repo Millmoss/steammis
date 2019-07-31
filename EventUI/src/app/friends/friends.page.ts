@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Friend } from '../models/friend';
+import { convertPropertyBindingBuiltins } from '@angular/compiler/src/compiler_util/expression_converter';
+import { strictEqual } from 'assert';
+import { ActivatedRoute, Router } from "@angular/router";
+
+
 
 @Component({
   selector: 'app-friends',
@@ -9,26 +14,38 @@ import { Friend } from '../models/friend';
 export class FriendsPage implements OnInit {
 
   friends = Array<Friend>();
+  data:any;
 
-  constructor() {
-    let obj1: Friend = {
-      picLink: "https://cdn.psychologytoday.com/sites/default/files/styles/profile/public/field_user_blogger_photo/sander-van-der-linden.jpg?itok=t8VIAmgL",
-      name: "Bob Ross"
-    }
-    this.friends.push(obj1);
-    obj1 = {
-      picLink: 'https://www.catleylakeman.co.uk/assets/img/CATLEY_LAKEMAN-Andy.jpg',
-      name: "Charles Dickenson"
-    }
-    this.friends.push(obj1);
-    obj1 = {
-      picLink: 'https://content-static.upwork.com/uploads/2014/10/01073435/profilephoto5.jpg',
-      name: "Ice T"
-    }
-    this.friends.push(obj1);
+  constructor(private route:ActivatedRoute, private router: Router) {
+    let numFriends = 6
+    let friends = [];
+    for(let i = 0; i < numFriends; i++){
+      let request = new XMLHttpRequest();
+      request.open('GET', 'https://randomuser.me/api/', true)
+      request.onload = function() {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response)
+
+        if (request.status >= 200 && request.status < 400) {
+          let obj: Friend = {
+            picLink: data.results[0].picture.medium,
+            name: data.results[0].name.first.toUpperCase() + " " + data.results[0].name.last.toUpperCase()
+          }
+          friends.push(obj);
+          
+        } else {
+          console.log('error')
+        }
+        
+      }
+      request.send()
+    };
+    this.friends = friends;
+
   }
 
   ngOnInit() {
+    
   }
 
 }

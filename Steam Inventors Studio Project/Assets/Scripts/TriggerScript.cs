@@ -6,9 +6,9 @@ public class TriggerScript : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    void OnTriggerEnte(Collider Other) {
+    void OnTriggerEnter(Collider Other) {
         gameObject.transform.position = new Vector3 (0, 2, 0);
-
+        Destroy(gameObject);
 
     }
     

@@ -7,17 +7,36 @@ public class Caden : MonoBehaviour
 
     private Rigidbody rb3d;
     public float speed;
+    private Camera c;
     void Start()
     {
         rb3d = GetComponent<Rigidbody>();
+        c = FindObjectOfType<Camera>();
+    }
+
+    void Update()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        rb3d.AddForce(new Vector3(moveVertical, 0, -moveHorizontal));
+
+        Vector3 dir = new Vector3(1, 50, 3);
+        transform.position - c.transform.position;
+        dir.Normalize();
+
+        Ray r = c.ScreenPointToRay(Input.mousePosition);
+        RaycastHit rh;
+
+        if (Physics.Raycast(r, out rh, 50))
+        {
+            print(rh.point);
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        rb3d.AddForce(new Vector3(moveVertical, 0, -moveHorizontal));
+        
         
         /*
         if (Input.GetKey(KeyCode.W))

@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card>
+    <div class="card"> 
+      <img id="profilePic" src="https://www.oliverwyman.com/content/dam/oliver-wyman/v2/careers/profiles/scottbk-profile-460x460.jpg"/>
+      <ion-card-title id="name">John Smith</ion-card-title>
+      <ion-card-subtitle id="class">App Veteran</ion-card-subtitle>
+      <ion-button [routerLink]="['/friends']" size="large" strong expand="block" id="button1">Friends</ion-button>
+      <ion-button size="large" strong expand="block" id="button2">Game Stats</ion-button>
+      <ion-button size="large" strong expand="block" id="button3">Event Stats</ion-button>
+    </div>
+
+      
+  </ion-card>
+</ion-content>

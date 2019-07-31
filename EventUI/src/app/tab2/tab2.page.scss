@@ -1,1 +1,61 @@
+#profilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
 
+}
+
+#name {
+    font-size: 25px;
+    width: 150px;
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#button1 {
+    position: relative;
+    top: 280px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#button2 {
+    position: relative;
+    top: 305px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#button3 {
+    position: relative;
+    top: 330px;
+    height: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.card{
+    height: 600px;
+    text-align: center;
+}
+
+#class {
+    font-size: 20;
+    width: 150px;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+}

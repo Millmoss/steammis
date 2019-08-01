@@ -19,18 +19,19 @@ h3 {
     margin: 0;
 }
 
-.health {
+#health {
     background-color: rgb(255, 60, 46);
+    opacity: health;
 }
 
-.productivity {
+#productivity {
     background-color: #00FF7F;
 }
 
-.power {
+#power {
     background-color: rgb(109, 161, 189);
 }
 
-.magic {
+#magic {
     background-color: #BA55D3;
 }

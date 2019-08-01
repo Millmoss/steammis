@@ -9,6 +9,10 @@ export interface Event {
     organizer: string,
     pointsObtained: number,
     picture: string,
-    description: string
+    description: string,
+    upvotes: number,
+    approved: boolean,
+    index: number,
+    hasUpvoted: boolean
 
 }

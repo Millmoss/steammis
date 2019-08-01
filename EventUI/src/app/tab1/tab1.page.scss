@@ -2,3 +2,25 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.mainEvent {
+  margin-bottom: 0;
+}
+
+.upvotesSection {
+  margin-top: 0;
+}
+
+.upvote {
+  float:right;
+  position: relative;
+  display: inline-block;
+  top:-9px;
+
+}
+
+.numUpvotes {
+  position: relative;
+  display: inline-block;
+  
+}

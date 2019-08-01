@@ -27,9 +27,13 @@ export class FriendsPage implements OnInit {
         var data = JSON.parse(this.response)
 
         if (request.status >= 200 && request.status < 400) {
+          let first = data.results[0].name.first;
+          let last = data.results[0].name.last;
+          let theFirst = first.charAt(0).toUpperCase() + first.slice(1);
+          let theLast = last.charAt(0).toUpperCase() + last.slice(1);
           let obj: Friend = {
             picLink: data.results[0].picture.medium,
-            name: data.results[0].name.first.toUpperCase() + " " + data.results[0].name.last.toUpperCase()
+            name: theLast + " " + theFirst
           }
           friends.push(obj);
           

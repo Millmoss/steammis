@@ -7,7 +7,9 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   { path: 'friends', loadChildren: './friends/friends.module#FriendsPageModule' },
-  { path: 'friends/:friends', loadChildren: './friends/friends.module#FriendsPageModule'}
+  { path: 'friends/:friends', loadChildren: './friends/friends.module#FriendsPageModule'},
+  { path: 'game-stats', loadChildren: './game-stats/game-stats.module#GameStatsPageModule' },
+  { path: 'event-stats', loadChildren: './event-stats/event-stats.module#EventStatsPageModule' }
 ];
 @NgModule({
   imports: [

@@ -2,9 +2,11 @@ import { User } from './user';
 
 export interface Event {
 
-    date: Date,
+    year:number,
+    month: string,
+    day: number,
     name: string,
-    organizer: User,
+    organizer: string,
     pointsObtained: number,
     picture: string,
     description: string

@@ -20,7 +20,7 @@ export class GameStatsPage implements OnInit {
   constructor() { 
     this.username = "realJohnSmith";
     this.points = 150;
-    this.petType = "Health";
+    this.petType = "Attack";
     this.level = 23;
     this.health = 60;
     this.power = 40;

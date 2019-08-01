@@ -21,7 +21,8 @@ public class Caden : MonoBehaviour
         rb3d.AddForce(new Vector3(moveVertical, 0, -moveHorizontal));
 
         Vector3 dir = new Vector3(1, 50, 3);
-        transform.position - c.transform.position;
+        
+        //transform.position - c.transform.position;
         dir.Normalize();
 
         Ray r = c.ScreenPointToRay(Input.mousePosition);

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Friends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="friendHolder" *ngFor="let friend of friends">
+    <img src={{friend.picLink}}/>
+    <h1>{{friend.name}}</h1>
+  </div>
+</ion-content>

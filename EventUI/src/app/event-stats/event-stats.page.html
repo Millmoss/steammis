@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Event Stats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="event">
+    <ion-card class="mainEvent">
+      <img src="{{allEvents[0].picture}}"/>
+      <ion-card-header>
+        <div class="NameAndOrganizer">
+          <ion-card-title>{{allEvents[0].name}}</ion-card-title>
+          <ion-card-subtitle>Organized by {{allEvents[0].organizer}}</ion-card-subtitle>
+        </div>
+        <p>{{allEvents[0].description}}</p>
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="pointsGained">
+      <ion-card-title class="pointsGainedText">+{{allEvents[0].pointsObtained}} Points Gained</ion-card-title>
+      <ion-card-subtitle>{{allEvents[0].day}} {{allEvents[0].month}} {{allEvents[0].year}}</ion-card-subtitle>
+    </ion-card>
+  </div>
+  <div class="event">
+    <ion-card class="mainEvent">
+      <img src="{{allEvents[1].picture}}"/>
+      <ion-card-header>
+        <div class="NameAndOrganizer">
+          <ion-card-title>{{allEvents[1].name}}</ion-card-title>
+          <ion-card-subtitle>Organized by {{allEvents[1].organizer}}</ion-card-subtitle>
+        </div>
+        <p>{{allEvents[1].description}}</p>
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="pointsGained">
+      <ion-card-title class="pointsGainedText">+{{allEvents[1].pointsObtained}} Points Gained</ion-card-title>
+      <ion-card-subtitle>{{allEvents[1].day}} {{allEvents[1].month}} {{allEvents[1].year}}</ion-card-subtitle>
+    </ion-card>
+  </div>
+  
+</ion-content>

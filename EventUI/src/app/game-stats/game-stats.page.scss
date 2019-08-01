@@ -1,0 +1,36 @@
+li {
+    width: 90%;
+    list-style-type: none;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.health {
+    background-color: rgb(255, 60, 46);
+}
+
+.productivity {
+    background-color: #00FF7F;
+}
+
+.power {
+    background-color: rgb(109, 161, 189);
+}
+
+.magic {
+    background-color: #BA55D3;
+}

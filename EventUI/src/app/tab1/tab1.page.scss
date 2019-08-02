@@ -7,6 +7,14 @@
   margin-bottom: 0;
 }
 
+.allEvents {
+  margin-bottom: 50px;
+}
+
+.event {
+  margin-bottom: 10px;
+}
+
 .upvotesSection {
   margin-top: 0;
 }
@@ -23,4 +31,37 @@
   position: relative;
   display: inline-block;
   
+}
+
+.createEvent {
+  position: fixed;
+  top: 616px;
+  margin:0;
+  padding:0;
+  width: 100%;
+  
+}
+
+.tab2 {
+  position: fixed;
+  top: 675px;
+  left: 0%;
+  height: 60px;
+  width: 33%;
+}
+
+.tab1 {
+  position: fixed;
+  top: 675px;
+  left: 33%;
+  height: 60px;
+  width: 33%;
+}
+
+.tab3 {
+  position: fixed;
+  top: 675px;
+  left: 66%;
+  height: 60px;
+  width: 33%;
 }

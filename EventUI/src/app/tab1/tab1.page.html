@@ -7,7 +7,9 @@
 </ion-header>
 
 <ion-content>
-    <div *ngFor="let event of events">
+  
+  <div class="allEvents">
+    <div class="event" *ngFor="let event of events">
       <ion-card class="mainEvent">
         <img src="{{event.picture}}"/>
         <ion-card-header>
@@ -27,5 +29,10 @@
           </ion-button>
         </ion-card-header>
       </ion-card>
+    </div>
+  </div>
+    
+    <div class="createEvent">
+      <ion-button expand="full" size="large" (click)="createEvent()">Create Event</ion-button>
     </div>
 </ion-content>

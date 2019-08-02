@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Make Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+    <ion-item>
+      <ion-label position="stacked">Name of Event<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="nameOfEvent" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Organizer Name<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="organizerName" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Year<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="year" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Month<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="month" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Day<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="day" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Picture<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="picture" required type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Description<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input [(ngModel)]="description" required type="text"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="makeEvent()" class="ion-no-margin">Make Event</ion-button>
+  </div>
+</ion-content>

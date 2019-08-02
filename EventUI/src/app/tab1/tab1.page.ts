@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Event } from "../models/event";
+import { ModalController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -10,8 +13,12 @@ export class Tab1Page {
 
   events: Array<Event>;
   hasUpvoted: boolean;
+  value: string;
+  data: any;
 
-  constructor() {
+  
+
+  constructor(private route:ActivatedRoute, private router: Router, private modal: ModalController) {
     this.events = [];
     let obj:Event = {
       year: 2019,
@@ -52,6 +59,17 @@ export class Tab1Page {
       this.events[event.target.id].hasUpvoted = true;
     }
     
+  }
+
+  ngOnInit(){
+    if (this.route.snapshot.data['special']) {
+      this.data = this.route.snapshot.data['special'];
+    }
+    console.log(this.data);
+  }
+
+  createEvent() {
+    this.router.navigate(['/make-event']);
   }
 
 }

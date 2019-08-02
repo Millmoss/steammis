@@ -15,7 +15,7 @@ public class TriggerScript : MonoBehaviour
         GameObject temp = Instantiate<GameObject>(g);
         temp.transform.position = new Vector3(-9, 4, 0);
         Destroy(gameObject);
-
+        bool hit = true;
     }
     
 
@@ -27,6 +27,6 @@ public class TriggerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        bool hit = false;
     }
 }

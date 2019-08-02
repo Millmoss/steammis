@@ -10,7 +10,7 @@ import { convertPropertyBindingBuiltins } from '@angular/compiler/src/compiler_u
 })
 export class MakeEventPage implements OnInit {
 
-  eventName: string;
+  nameOfEvent: string;
   organizerName: string;
   year: string;
   month: string;
@@ -28,7 +28,7 @@ export class MakeEventPage implements OnInit {
 
     
     this.dataService.setData(1, {
-      eventName: this.eventName,
+      eventName: this.nameOfEvent,
       organizerName: this.organizerName,
       year: this.year,
       month: this.month,

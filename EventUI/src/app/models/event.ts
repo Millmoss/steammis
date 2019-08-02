@@ -13,6 +13,8 @@ export interface Event {
     upvotes: number,
     approved: boolean,
     index: number,
-    hasUpvoted: boolean
+    hasUpvoted: boolean,
+    numPeople: number,
+    hasJoined: string
 
 }

@@ -32,7 +32,9 @@ export class Tab1Page {
       upvotes: 154,
       approved: false,
       index: 0,
-      hasUpvoted: false
+      hasUpvoted: false,
+      numPeople: 0,
+      hasJoined: "Join"
     }
     this.events.push(obj);
     obj = {
@@ -47,7 +49,9 @@ export class Tab1Page {
       upvotes: 103,
       approved: false,
       index: 1,
-      hasUpvoted: false
+      hasUpvoted: false,
+      numPeople: 0,
+      hasJoined: "Join"
 
     }
     this.events.push(obj);
@@ -64,8 +68,26 @@ export class Tab1Page {
   ngOnInit(){
     if (this.route.snapshot.data['special']) {
       this.data = this.route.snapshot.data['special'];
+      let obj:Event = {
+        name: this.data.eventName,
+        organizer: this.data.organizerName,
+        year: this.data.year,
+        month: this.data.month,
+        day: this.data.day,
+        picture: this.data.picture,
+        description: this.data.description,
+        pointsObtained: 0,
+        upvotes: 0,
+        approved: false,
+        index: 2,
+        hasUpvoted: false,
+        numPeople: 0,
+        hasJoined: "Join"
+      }
+      this.events.push(obj);
     }
-    console.log(this.data);
+    
+    
   }
 
   createEvent() {

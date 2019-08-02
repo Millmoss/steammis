@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Caden : MonoBehaviour
 {
-
+    
     private Rigidbody rb3d;
     public float speed;
     public float p;
@@ -20,7 +20,7 @@ public class Caden : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        rb3d.AddForce(new Vector3(moveVertical * 2, 0, -moveHorizontal * 2));
+        rb3d.AddForce(new Vector3(-moveHorizontal * 2, 0, -moveVertical * 2));
        // print(moveVertical + ", " + moveHorizontal);
      
     }

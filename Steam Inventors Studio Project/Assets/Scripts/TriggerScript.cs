@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class TriggerScript : MonoBehaviour
 {
+    public Collider trigger;
+    public GameObject heart;
+   
+    bool hit = false;
+    private Vector3 vec = new Vector3 (0, 10.0f, 0);
 
-    public GameObject g;
-    // Start is called before the first frame update
-
-
-    void OnTriggerEnter(Collider Other) {
-        gameObject.transform.position = new Vector3 (0, 2, 0);
-        
-        GameObject temp = Instantiate<GameObject>(g);
-        temp.transform.position = new Vector3(-9, 4, 0);
-        Destroy(gameObject);
-        bool hit = true;
-    }
-    
-
-    void Start()
+    void OnTriggerEnter(Collider trigger)
     {
+        if (hit == false)
+        {
         
-    }
+            Instantiate(heart, vec, Quaternion.identity);
+            hit = true;
+        }
+        else
+        { }
 
-    // Update is called once per frame
-    void Update()
-    {
-        bool hit = false;
+
     }
 }

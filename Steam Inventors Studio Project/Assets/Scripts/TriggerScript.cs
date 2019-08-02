@@ -13,8 +13,9 @@ public class TriggerScript : MonoBehaviour
         gameObject.transform.position = new Vector3 (0, 2, 0);
         
         GameObject temp = Instantiate<GameObject>(g);
-        temp.transform.position = new Vector3(-9, 2, 0);
+        temp.transform.position = new Vector3(-9, 4, 0);
         Destroy(gameObject);
+
     }
     
 

@@ -12,9 +12,9 @@ public class Movement : MonoBehaviour
     {
 
 
-        Destroy(food);
         GameObject foodPosition = Instantiate<GameObject>(food);
         foodPosition.transform.position = new Vector3(0, 4, 9);
+        Destroy(food);
 
     }
    

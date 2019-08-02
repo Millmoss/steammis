@@ -12,15 +12,10 @@ public class TriggerScript : MonoBehaviour
 
     void OnTriggerEnter(Collider trigger)
     {
-        if (hit == false)
+        if (trigger.tag == "Respawn")
         {
-        
             Instantiate(heart, vec, Quaternion.identity);
             hit = true;
         }
-        else
-        { }
-
-
     }
 }

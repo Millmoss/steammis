@@ -1,11 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Forum
+      Join Events
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
+  <div class="allEvents">
+    <div class="event" *ngFor="let event of allEvents">
+      <ion-card class="mainEvent">
+        <img src="{{event.picture}}"/>
+        <ion-card-header>
+          <div class="NameAndOrganizer">
+            <ion-card-title>{{event.name}}</ion-card-title>
+            <ion-card-subtitle>Organized by {{event.organizer}}</ion-card-subtitle>
+          </div>
+          <p>{{event.description}}</p>
+        </ion-card-header>
+      </ion-card>
+      <ion-card class="upvotesSection">
+        <ion-card-header>
+          <ion-card-title class="numPeople">Number of people: {{event.numPeople}}</ion-card-title>
+          <ion-button id="{{event.index}}" class="join" color="secondary" (click)="join($event)">
+            {{event.hasJoined}}
+            <ion-icon name="arrow-round-up"></ion-icon>
+          </ion-button>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>

@@ -26,6 +26,7 @@ export class GameStatsPage implements OnInit {
     this.power = 40;
     this.magic = 50;
     this.productivity = 80;
+
   }
 
   ngOnInit() {
